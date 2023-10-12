@@ -14,7 +14,7 @@ function About() {
 			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
 				About
 			</h3>
-
+			{/* CHANGE TO NEXT IMAGE */}
 			<motion.img
 				initial={{ x: -200, opacity: 0 }}
 				transition={{ duration: 1.2 }}
@@ -22,7 +22,7 @@ function About() {
 				viewport={{ once: true }}
 				// height={224}
 				// width={224}
-				className="-mb-20 h-56 w-56 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]"
+				className="-mb-20 h-56 w-56 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px] xl:mt-24"
 				src="https://catastic.b-cdn.net/wp-content/uploads/2019/12/munchkin-kitten.jpg"
 			/>
 			<div className="space-y-10 px-0 md:px-10">
