@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 type Props = {};
@@ -14,7 +13,7 @@ function Projects({}: Props) {
 			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
 				Projects
 			</h3>
-			<div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+			<div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
 				{projects.map((project, i) => (
 					<div
 						key={1 + i}
@@ -28,7 +27,7 @@ function Projects({}: Props) {
 							src="https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png"
 							alt=""
 						/>
-						<div className="space-y-10 px-0 md:px-10 max-w-6-xl">
+						<div className="space-y-10 px-0 md:px-10 max-w-6xl">
 							<h4 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-center">
 								<span className="underline decoration-[#F7AB0A]">
 									Case study {i + 1} of {projects.length}:

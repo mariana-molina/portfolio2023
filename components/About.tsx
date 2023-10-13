@@ -21,7 +21,7 @@ function About() {
 				viewport={{ once: true }}
 				// height={224}
 				// width={224}
-				className="-mb-20 h-56 w-56 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px] xl:mt-24"
+				className="-mb-20 mt-16 h-56 w-56 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-72 md:h-96 xl:w-[400px] xl:h-[500px] "
 				src="https://catastic.b-cdn.net/wp-content/uploads/2019/12/munchkin-kitten.jpg"
 			/>
 			<div className="space-y-10 px-0 md:px-10">

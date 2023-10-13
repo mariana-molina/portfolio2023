@@ -23,8 +23,8 @@ function Hero() {
 			<Image
 				src={profile}
 				alt="Profile picture"
-				width={110}
-				height={110}
+				width={150}
+				height={150}
 				className="relative rounded-full mx-auto object-cover"
 			/>
 			<div className="z-20">
@@ -40,9 +40,9 @@ function Hero() {
 					<Link href="#about">
 						<button className="heroButton">About</button>
 					</Link>
-					<Link href="#experience">
+					{/* <Link href="#experience">
 						<button className="heroButton">Experience</button>
-					</Link>
+					</Link> */}
 					<Link href="#skills">
 						<button className="heroButton">Skills</button>
 					</Link>
