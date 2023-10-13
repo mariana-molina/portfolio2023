@@ -14,7 +14,6 @@ function About() {
 			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
 				About
 			</h3>
-			{/* CHANGE TO NEXT IMAGE */}
 			<motion.img
 				initial={{ x: -200, opacity: 0 }}
 				transition={{ duration: 1.2 }}
@@ -28,7 +27,7 @@ function About() {
 			<div className="space-y-10 px-0 md:px-10">
 				<h4 className="text-4xl font-semibold">
 					Here is a{' '}
-					<span className="underline decoration-[rgb(213,202,1)]">little</span>{' '}
+					<span className="underline decoration-[#F7AB0A]">little</span>{' '}
 					background
 				</h4>
 				<p className="text-base">
