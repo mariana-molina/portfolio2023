@@ -3,8 +3,13 @@ import React from 'react';
 
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
+import { Social } from '@/typings';
 
-function Header() {
+type HeaderProps = {
+	socials: Social[];
+};
+
+function Header({ socials }: HeaderProps) {
 	return (
 		<header className="sticky top-0 flex items-start justify-between max-w-7-xl mx-auto z-20 p-5 xl:items-center">
 			<motion.div
@@ -21,21 +26,16 @@ function Header() {
 				transition={{ duration: 1.5 }}
 				className="flex flex-row items-center"
 			>
-				<SocialIcon
-					url="https://www.linkedin.com/in/marianasoledadmolina/"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<SocialIcon
-					url="https://www.github.com/mariana-molina"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<SocialIcon
-					url="https://www.instagram.com/marmolina_"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
+				{socials.map((social: any) => {
+					return (
+						<SocialIcon
+							key={social._id}
+							url={social.url}
+							fgColor="gray"
+							bgColor="transparent"
+						/>
+					);
+				})}
 			</motion.div>
 
 			<motion.div
