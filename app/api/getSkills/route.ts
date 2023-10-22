@@ -3,7 +3,7 @@ import { sanityClient } from '@/sanity';
 import { Skill } from '@/typings';
 import { NextResponse } from 'next/server';
 
-const query = groq`*[_type == "skill"]`;
+const query = groq`*[_type == "skills"]`;
 
 export async function GET(req: Request) {
 	const skills: Skill[] = await sanityClient.fetch(query);
