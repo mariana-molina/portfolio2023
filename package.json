@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.0.18",
     "framer-motion": "^10.16.4",
     "next": "latest",
+    "next-sanity": "^5.5.8",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.47.0",

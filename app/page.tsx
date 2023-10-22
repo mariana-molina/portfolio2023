@@ -5,6 +5,16 @@ import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import WorkExperience from '@/components/WorkExperience';
+import { PageInfo } from '@/typings';
+import { fetchPageInfo } from '@/utils/fetchPageInfo';
+import { fetchProjects } from '@/utils/fetchProjects';
+import { fetchSkills } from '@/utils/fetchSkills';
+import { fetchSocials } from '@/utils/fetchSocials';
+import { GetStaticProps } from 'next';
+
+// type Props = {
+// 	pageInfo: PageInfo;
+// };
 
 export default function Home() {
 	return (
@@ -25,9 +35,18 @@ export default function Home() {
 			<section id="projects" className="snap-center">
 				<Projects />
 			</section>
-			<section id="contact" className="snap-start mb-40">
+			<section id="contact" className="snap-center ">
 				<ContactMe />
 			</section>
 		</div>
 	);
 }
+
+const getData = async () => {
+	const pageInfo = await fetchPageInfo();
+	const skills = await fetchSkills();
+	const socials = await fetchSocials();
+	const projects = await fetchProjects();
+	return { props: { pageInfo, skills, socials, projects } };
+};
+getData();
