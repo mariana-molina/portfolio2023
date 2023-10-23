@@ -18,7 +18,7 @@ function Skills({ skills }: SkillsProps) {
 		>
 			<h3 className="mainTitles">Skills</h3>
 			<h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm px-5">
-				Hover over a skill for currency proficiency
+				Hover over a skill for current proficiency
 			</h3>
 			<div className="mt-28 md:mt-36 xl:mt-40 grid grid-cols-4 md:grid-cols-5 gap-3 md:gap-4">
 				{skills.map(skill => (
