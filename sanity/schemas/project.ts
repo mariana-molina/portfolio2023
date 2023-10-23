@@ -35,5 +35,15 @@ export default defineType({
       title: 'LinkToBuild',
       type: 'url',
     },
+    {
+      name: 'isItMovile',
+      title: 'isItMovile',
+      type: 'boolean',
+    },
+    {
+      name: 'linkToDeploy',
+      title: 'LinkToDeploy',
+      type: 'url',
+    },
   ],
 })

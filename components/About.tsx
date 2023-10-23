@@ -24,7 +24,7 @@ function About({ pageInfo }: AboutProps) {
 					transition={{ duration: 1.2 }}
 					whileInView={{ x: 0, opacity: 1 }}
 					viewport={{ once: true }}
-					className="h-40 w-40 rounded-full md:rounded-lg md:w-[350px] md:h-[450px] xl:w-[500px] xl:h-[600px] "
+					className="h-40 w-40 rounded-full object-cover md:rounded-lg md:w-[350px] md:h-[450px] xl:w-[400px] xl:h-[500px] "
 					src={urlFor(pageInfo?.profilePic).url()}
 				/>
 				<div className="space-y-4">

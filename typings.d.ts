@@ -52,6 +52,8 @@ export interface Project extends SanityBody {
 	linkToBuild: string;
 	summary: string;
 	technologies: Technology[];
+	isItMovile: boolean;
+	linkToDeploy?: string;
 }
 
 export interface Experience extends SanityBody {

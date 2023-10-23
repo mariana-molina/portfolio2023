@@ -1,44 +1,67 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Project, Project as ProyectType } from '@/typings';
+import { urlFor } from '@/sanity';
+import Image from 'next/image';
+import Link from 'next/link';
 
-type Props = {};
+export const revalidate = 10;
 
-function Projects({}: Props) {
-	const projects = [1, 2, 3, 4, 5];
+type ProjectProps = {
+	projects: ProyectType[];
+};
 
+function Projects({ projects }: ProjectProps) {
 	return (
-		<div className="h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
-			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-				Projects
-			</h3>
-			<div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-				{projects.map((project, i) => (
+		<div className="h-screen flex flex-col relative overflow-hidden items-center z-0">
+			<h3 className="mainTitles">Projects</h3>
+			<div className="w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+				{projects.map((project: Project, i) => (
 					<div
-						key={1 + i}
-						className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-36 "
+						key={project._id}
+						className="w-screen mt-36 md:mt-40 px-10 pb-10 flex-shrink-0 snap-center flex flex-col items-center justify-start space-y-7 md:flex-row md:space-x-10"
 					>
-						<motion.img
-							initial={{ y: -300, opacity: 0 }}
-							transition={{ duration: 1.2 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							src="https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png"
-							alt="project image"
+						<Image
+							src={urlFor(project.image).url()}
+							alt={project.title}
+							width={0}
+							height={0}
+							sizes="100vw"
+							className={`
+							${
+								project.isItMovile
+									? 'object-fill rounded-2xl w-[150px] h-[250px]'
+									: 'rounded-lg object-cover w-[250px] h-[250px]'
+							} 
+							 md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] `}
 						/>
-						<div className="space-y-10 px-0 md:px-10 max-w-6xl">
-							<h4 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-center">
+						<div className="space-y-5 md:px-5">
+							<h4 className="text-2xl md:text-3xl xl:text-4xl md:text-left font-semibold text-center">
 								<span className="underline decoration-[#F7AB0A]">
-									Case study {i + 1} of {projects.length}:
+									Case {i + 1} of {projects.length}:
 								</span>{' '}
-								Uber clone
+								{project.title}
 							</h4>
-							<p className="text-lg text-center md:text-left">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Quisquam, accusamus quia minus cupiditate dolor eius? Reiciendis
-								sint facilis nostrum?{' '}
+							<p className="text-sm text-justify md:text-base md:text-left">
+								{project.summary}
 							</p>
+							<div className="flex flex-row space-x-4 items-center justify-center md:justify-start">
+								<Link
+									href={project.linkToBuild}
+									className="heroButton shadow-md"
+								>
+									To code
+								</Link>
+								{project.linkToDeploy && (
+									<Link
+										href={project.linkToDeploy}
+										className="heroButton shadow-md"
+									>
+										To deploy page
+									</Link>
+								)}
+							</div>
 						</div>
 					</div>
 				))}
