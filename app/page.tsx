@@ -4,13 +4,12 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
-import WorkExperience from '@/components/WorkExperience';
 import { fetchPageInfo } from '@/utils/fetchPageInfo';
 import { fetchProjects } from '@/utils/fetchProjects';
 import { fetchSkills } from '@/utils/fetchSkills';
 import { fetchSocials } from '@/utils/fetchSocials';
 
-export const revalidate = 10;
+const revalidate = 10;
 
 export default async function Home() {
 	const socials = await fetchSocials();
@@ -27,9 +26,6 @@ export default async function Home() {
 			<section id="about" className="snap-center">
 				<About pageInfo={pageInfo} />
 			</section>
-			{/* <section id="#experience" className="snap-center">
-				<WorkExperience />
-			</section> */}
 			<section id="skills" className="snap-center">
 				<Skills skills={skills} />
 			</section>
