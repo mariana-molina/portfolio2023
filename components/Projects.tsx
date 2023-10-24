@@ -14,9 +14,14 @@ type ProjectProps = {
 
 function Projects({ projects }: ProjectProps) {
 	return (
-		<div className="h-screen relative flex flex-col space-y-7 overflow-hidden md:space-y-0 items-center z-0 pt-[27%] md:pt-[7%]">
-			<h3 className="mainTitles">Projects</h3>
-			<div className="w-full h-[90%] md:h-[94%] lg:h-[95%] flex overflow-x-scroll snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+		<div className="h-screen relative flex flex-col space-y-7 overflow-hidden md:space-y-0 items-center z-0 pt-[27%] md:pt-[8%] lg:pt-[5%]">
+			<div className="flex flex-col items-center text-center space-y-5">
+				<h3 className="mainTitles">Projects</h3>
+				<h3 className="uppercase tracking-[3px] text-gray-500 text-sm px-5  text-center">
+					Scroll right to see all the projects
+				</h3>
+			</div>
+			<div className="w-full h-[88%] flex overflow-x-scroll snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
 				{projects.map((project: Project, i) => (
 					<div
 						key={project._id}

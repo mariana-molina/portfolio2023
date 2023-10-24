@@ -34,17 +34,15 @@ function ContactMe() {
 	};
 
 	return (
-		<div className="h-screen flex flex-col justify-evenly items-center md:pt-[5%] lg:pt-0">
-			<h3 className="uppercase tracking-[20px] text-gray-500 text-2xl lg:text-3xl">
-				Contact
-			</h3>
-			<div className="flex flex-col space-y-10 md:space-y-6 lg:space-y-10 ">
+		<div className="h-screen flex flex-col justify-evenly items-center md:pt-[3%] lg:pt-[5%]">
+			<h3 className="mainTitles">Contact</h3>
+			<div className="flex flex-col space-y-10 md:space-y-6 lg:space-y-9 ">
 				<div className="semibold text-2xl lg:text-4xl text-center flex flex-col md:flex-row">
 					<h4>{`I've got just what you need.`}</h4>
 					<span className="decoration-[#F7AB0A] underline md:indent-1">{`Let's talk.`}</span>
 				</div>
 
-				<div className="space-y-4 lg:space-y-9">
+				<div className="space-y-4 lg:space-y-7">
 					<div className="flex items-center justify-center space-x-5">
 						<PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
 						<p className="text-xl">+46 723616023</p>

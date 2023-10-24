@@ -14,7 +14,7 @@ function Skills({ skills }: SkillsProps) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
-			className="h-screen flex flex-col text-center max-w-7xl min-h-screen justify-evenly mx-auto items-center md:pt-[5%]  lg:pt-0"
+			className="h-screen flex flex-col text-center max-w-7xl min-h-screen justify-evenly mx-auto items-center md:pt-[5%] lg:pt-[3%]"
 		>
 			<div className="space-y-5">
 				<h3 className="mainTitles">Skills</h3>
