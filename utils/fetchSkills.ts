@@ -1,9 +1,8 @@
 import { Skill } from '@/typings';
+import getBasePath from './getBasePath';
 
 export const fetchSkills = async () => {
-	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_SANITY_BASE_URL}/api/getSkills`
-	);
+	const res = await fetch(`${getBasePath()}/api/getSkills`);
 
 	const data = await res.json();
 	const skills: Skill[] = data.skills;

@@ -36,3 +36,4 @@ next-env.d.ts
 
 sanity/node_modules
 .vercel
+.env*.local
