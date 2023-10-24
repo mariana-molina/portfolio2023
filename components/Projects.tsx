@@ -20,7 +20,7 @@ function Projects({ projects }: ProjectProps) {
 				{projects.map((project: Project, i) => (
 					<div
 						key={project._id}
-						className="w-screen mt-36 mb-20 md:my-[15%] px-10  flex-shrink-0 snap-center"
+						className="w-screen mt-36 mb-20 md:mb-[13%] md:mt-[15%] px-10  flex-shrink-0 snap-center"
 					>
 						<div className="md:w-[70%] md:ml-[15%] flex flex-col items-center space-y-7 md:flex-row md:space-x-10">
 							<Image
@@ -38,7 +38,7 @@ function Projects({ projects }: ProjectProps) {
 							 md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] `}
 							/>
 							<div className="space-y-5 md:px-5">
-								<h4 className="text-2xl md:text-3xl xl:text-4xl md:text-left font-semibold text-center">
+								<h4 className="text-2xl md:text-2xl xl:text-4xl md:text-left font-semibold text-center">
 									<span className="underline decoration-[#F7AB0A]">
 										Case {i + 1} of {projects.length}:
 									</span>{' '}
