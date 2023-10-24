@@ -24,17 +24,17 @@ function Hero({ pageInfo }: HeroProps) {
 	});
 
 	return (
-		<div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+		<div className="h-screen flex flex-col space-y-8 lg:space-y-10 items-center justify-center text-center overflow-hidden">
 			<BackgroundCircles />
 			<Image
 				src={urlFor(pageInfo?.heroImage).url()}
 				alt="Profile picture"
 				width={200}
 				height={200}
-				className="relative rounded-full mx-auto object-cover"
+				className="relative rounded-full mx-auto object-cover lg:h-[250px] lg:w-[250px]"
 			/>
 			<div className="z-20">
-				<h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+				<h2 className="text-sm lg:text-base uppercase text-gray-500 pb-2 tracking-[15px]">
 					{pageInfo?.role}
 				</h2>
 				<h1 className="text-2xl lg:text-5xl font-semibold px-10">

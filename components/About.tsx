@@ -15,16 +15,16 @@ function About({ pageInfo }: AboutProps) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
-			className="h-screen flex flex-col relative text-center justify-center md:text-left md:flex-row max-w-7xl px-10 mx-auto items-center"
+			className="h-screen flex flex-col text-center justify-evenly md:text-left max-w-7xl px-10 mx-auto items-center pt-[20%] md:pt-[5%] lg:pt-[3%]"
 		>
 			<h3 className="mainTitles">About</h3>
-			<div className="mt-28 md:mt-32 flex flex-col items-center space-y-4 md:flex-row md:space-x-10 xl:space-x-14">
+			<div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-10 lg:space-x-14">
 				<motion.img
 					initial={{ x: -200, opacity: 0 }}
 					transition={{ duration: 1.2 }}
 					whileInView={{ x: 0, opacity: 1 }}
 					viewport={{ once: true }}
-					className="h-40 w-40 rounded-full object-cover md:rounded-lg md:w-[350px] md:h-[450px] xl:w-[400px] xl:h-[500px] "
+					className="h-40 w-40 rounded-full object-cover md:rounded-lg md:w-[350px] md:h-[450px] lg:w-[400px] lg:h-[500px] "
 					src={urlFor(pageInfo?.profilePic).url()}
 				/>
 				<div className="space-y-4">
@@ -33,7 +33,7 @@ function About({ pageInfo }: AboutProps) {
 						<span className="underline decoration-[#F7AB0A]">little</span>{' '}
 						background
 					</h4>
-					<p className="text-sm md:text-base xl:text-lg text-justify">
+					<p className="text-sm md:text-base lg:text-lg text-justify">
 						{pageInfo.backgroundInformation}
 					</p>
 				</div>
