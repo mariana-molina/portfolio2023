@@ -14,13 +14,15 @@ function Skills({ skills }: SkillsProps) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
-			className="h-screen flex relative flex-col text-center max-w-7xl min-h-screen justify-center mx-auto items-center"
+			className="h-screen flex flex-col text-center max-w-7xl min-h-screen justify-evenly mx-auto items-center md:pt-[5%]  lg:pt-0"
 		>
-			<h3 className="mainTitles">Skills</h3>
-			<h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm px-5">
-				Hover over a skill for current proficiency
-			</h3>
-			<div className="mt-28 md:mt-36 xl:mt-40 grid grid-cols-4 md:grid-cols-5 gap-3 md:gap-4">
+			<div className="space-y-5">
+				<h3 className="mainTitles">Skills</h3>
+				<h3 className="uppercase tracking-[3px] text-gray-500 text-sm px-5">
+					Hover over a skill for current proficiency
+				</h3>
+			</div>
+			<div className="grid grid-cols-4 md:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
 				{skills.map(skill => (
 					<Skill key={skill._id} skill={skill} />
 				))}
