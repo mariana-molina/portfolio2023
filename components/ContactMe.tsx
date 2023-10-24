@@ -15,6 +15,7 @@ type Inputs = {
 function ContactMe() {
 	const notify = () =>
 		toast('Copied!', {
+			containerId: 'A',
 			toastId: 'alkjsdbak1',
 			autoClose: 500,
 			hideProgressBar: true,
@@ -58,7 +59,11 @@ function ContactMe() {
 						<p className="text-xl hover:text-[#F7AB0A]">
 							marsmolina20@gmail.com
 						</p>
-						<ToastContainer style={{ width: '150px' }} />
+						<ToastContainer
+							enableMultiContainer
+							containerId={'A'}
+							style={{ width: '150px' }}
+						/>
 					</div>
 					<div className="flex items-center justify-center space-x-5">
 						<MapPinIcon className="text-[#F7AB0A] h-9 w-9 md:h-7 md:w-7 animate-pulse" />

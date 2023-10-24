@@ -20,7 +20,7 @@ function Projects({ projects }: ProjectProps) {
 				{projects.map((project: Project, i) => (
 					<div
 						key={project._id}
-						className="w-screen mt-36 mb-20 md:my-48 px-10  flex-shrink-0 snap-center"
+						className="w-screen mt-36 mb-20 md:my-[15%] px-10  flex-shrink-0 snap-center"
 					>
 						<div className="md:w-[70%] md:ml-[15%] flex flex-col items-center space-y-7 md:flex-row md:space-x-10">
 							<Image
@@ -49,6 +49,7 @@ function Projects({ projects }: ProjectProps) {
 								</p>
 								<div className="flex flex-row space-x-4 items-center justify-center md:justify-start">
 									<Link
+										target="_blank"
 										href={project.linkToBuild}
 										className="heroButton shadow-md"
 									>
@@ -56,6 +57,7 @@ function Projects({ projects }: ProjectProps) {
 									</Link>
 									{project.linkToDeploy && (
 										<Link
+											target="_blank"
 											href={project.linkToDeploy}
 											className="heroButton shadow-md"
 										>
