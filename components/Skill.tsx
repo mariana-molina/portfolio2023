@@ -1,4 +1,4 @@
-import { urlFor } from '@/sanity';
+import { urlFor } from '../sanity';
 import { Skill } from '@/typings';
 import { motion } from 'framer-motion';
 import React from 'react';

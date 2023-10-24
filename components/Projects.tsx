@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Project, Project as ProyectType } from '@/typings';
-import { urlFor } from '@/sanity';
+import { urlFor } from '../sanity';
 import Image from 'next/image';
 import Link from 'next/link';
 

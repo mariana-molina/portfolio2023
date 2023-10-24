@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
-import { sanityClient } from '@/sanity';
+import { sanityClient } from '../sanity';
 import { groq } from 'next-sanity';
 import { PageInfo, Project, Skill, Social } from '@/typings';
 

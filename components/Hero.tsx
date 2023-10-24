@@ -6,7 +6,7 @@ import Image from 'next/image';
 import profile from '../public/profilepic-min.jpeg';
 import Link from 'next/link';
 import { PageInfo } from '@/typings';
-import { urlFor } from '@/sanity';
+import { urlFor } from '../sanity';
 
 type HeroProps = {
 	pageInfo: PageInfo;
