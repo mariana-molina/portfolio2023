@@ -14,15 +14,15 @@ type ProjectProps = {
 
 function Projects({ projects }: ProjectProps) {
 	return (
-		<div className="h-screen flex flex-col relative overflow-hidden items-center z-0">
+		<div className="h-screen relative flex flex-col space-y-7 md:space-y-0 items-center z-0 pt-[27%] md:pt-[7%]">
 			<h3 className="mainTitles">Projects</h3>
-			<div className="w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+			<div className="w-full h-[90%] md:h-[94%] lg:h-[95%] flex overflow-x-scroll snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
 				{projects.map((project: Project, i) => (
 					<div
 						key={project._id}
-						className="w-screen mt-36 mb-20 md:mb-[13%] md:mt-[15%] px-10  flex-shrink-0 snap-center"
+						className="w-screen px-10 flex-shrink-0 snap-center"
 					>
-						<div className="md:w-[70%] md:ml-[15%] flex flex-col items-center space-y-7 md:flex-row md:space-x-10">
+						<div className="md:w-[75%] md:ml-[13%] h-[100%] flex flex-col justify-evenly items-center md:flex-row md:space-x-10">
 							<Image
 								src={urlFor(project.image).url()}
 								alt={project.title}
@@ -35,23 +35,23 @@ function Projects({ projects }: ProjectProps) {
 									? 'object-fill rounded-2xl w-[150px] h-[250px]'
 									: 'rounded-lg object-cover w-[250px] h-[250px]'
 							} 
-							 md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] `}
+							 md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] `}
 							/>
 							<div className="space-y-5 md:px-5">
-								<h4 className="text-2xl md:text-2xl xl:text-4xl md:text-left font-semibold text-center">
+								<h4 className="text-2xl md:text-2xl lg:text-4xl md:text-left font-semibold text-center">
 									<span className="underline decoration-[#F7AB0A]">
 										Case {i + 1} of {projects.length}:
 									</span>{' '}
 									{project.title}
 								</h4>
-								<p className="text-sm text-justify md:text-base md:text-left">
+								<p className="text-sm text-justify md:text-base md:text-left lg:text-2xl">
 									{project.summary}
 								</p>
 								<div className="flex flex-row space-x-4 items-center justify-center md:justify-start">
 									<Link
 										target="_blank"
 										href={project.linkToBuild}
-										className="heroButton shadow-md"
+										className="heroButton shadow-md font-bold"
 									>
 										To code
 									</Link>
@@ -59,7 +59,7 @@ function Projects({ projects }: ProjectProps) {
 										<Link
 											target="_blank"
 											href={project.linkToDeploy}
-											className="heroButton shadow-md"
+											className="heroButton shadow-md font-bold"
 										>
 											To demo
 										</Link>

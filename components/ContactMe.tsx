@@ -34,7 +34,7 @@ function ContactMe() {
 	};
 
 	return (
-		<div className="h-screen relative flex flex-col text-left justify-evenly items-center md:pt-[5%] lg:pt-0">
+		<div className="h-screen flex flex-col justify-evenly items-center md:pt-[5%] lg:pt-0">
 			<h3 className="uppercase tracking-[20px] text-gray-500 text-2xl lg:text-3xl">
 				Contact
 			</h3>
