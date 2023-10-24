@@ -20,47 +20,49 @@ function Projects({ projects }: ProjectProps) {
 				{projects.map((project: Project, i) => (
 					<div
 						key={project._id}
-						className="w-screen mt-36 md:mt-40 px-10 pb-10 flex-shrink-0 snap-center flex flex-col items-center justify-start space-y-7 md:flex-row md:space-x-10"
+						className="w-screen mt-36 mb-20 md:my-48 px-10  flex-shrink-0 snap-center"
 					>
-						<Image
-							src={urlFor(project.image).url()}
-							alt={project.title}
-							width={0}
-							height={0}
-							sizes="100vw"
-							className={`
+						<div className="md:w-[70%] md:ml-[15%] flex flex-col items-center space-y-7 md:flex-row md:space-x-10">
+							<Image
+								src={urlFor(project.image).url()}
+								alt={project.title}
+								width={0}
+								height={0}
+								sizes="100vw"
+								className={`
 							${
 								project.isItMovile
 									? 'object-fill rounded-2xl w-[150px] h-[250px]'
 									: 'rounded-lg object-cover w-[250px] h-[250px]'
 							} 
 							 md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] `}
-						/>
-						<div className="space-y-5 md:px-5">
-							<h4 className="text-2xl md:text-3xl xl:text-4xl md:text-left font-semibold text-center">
-								<span className="underline decoration-[#F7AB0A]">
-									Case {i + 1} of {projects.length}:
-								</span>{' '}
-								{project.title}
-							</h4>
-							<p className="text-sm text-justify md:text-base md:text-left">
-								{project.summary}
-							</p>
-							<div className="flex flex-row space-x-4 items-center justify-center md:justify-start">
-								<Link
-									href={project.linkToBuild}
-									className="heroButton shadow-md"
-								>
-									To code
-								</Link>
-								{project.linkToDeploy && (
+							/>
+							<div className="space-y-5 md:px-5">
+								<h4 className="text-2xl md:text-3xl xl:text-4xl md:text-left font-semibold text-center">
+									<span className="underline decoration-[#F7AB0A]">
+										Case {i + 1} of {projects.length}:
+									</span>{' '}
+									{project.title}
+								</h4>
+								<p className="text-sm text-justify md:text-base md:text-left">
+									{project.summary}
+								</p>
+								<div className="flex flex-row space-x-4 items-center justify-center md:justify-start">
 									<Link
-										href={project.linkToDeploy}
+										href={project.linkToBuild}
 										className="heroButton shadow-md"
 									>
-										To demo
+										To code
 									</Link>
-								)}
+									{project.linkToDeploy && (
+										<Link
+											href={project.linkToDeploy}
+											className="heroButton shadow-md"
+										>
+											To demo
+										</Link>
+									)}
+								</div>
 							</div>
 						</div>
 					</div>
