@@ -58,7 +58,7 @@ function Projects({ projects }: ProjectProps) {
 										href={project.linkToDeploy}
 										className="heroButton shadow-md"
 									>
-										To deploy page
+										To demo
 									</Link>
 								)}
 							</div>
